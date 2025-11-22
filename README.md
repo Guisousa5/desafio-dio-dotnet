@@ -1,38 +1,51 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+# DIO - Trilha .NET - Fundamentos  
+[www.dio.me](https://www.dio.me)
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+## Projeto Estacionamento - Solução do Desafio
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+Este projeto foi desenvolvido como solução ao desafio da trilha .NET Fundamentos da DIO, onde foi implementado um sistema simples para gerenciar um estacionamento.
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+---
 
-A classe contém três variáveis, sendo:
+## Funcionalidades implementadas
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+- **Adicionar veículo:** Permite cadastrar um veículo informando sua placa.  
+- **Remover veículo:** Remove um veículo existente, solicitando o tempo estacionado e calculando o valor a ser cobrado com base no preço inicial e preço por hora.  
+- **Listar veículos:** Exibe todos os veículos atualmente estacionados, ou uma mensagem informando se não houver nenhum veículo.  
+- **Menu interativo:** Interface simples no console para navegar entre as opções e encerrar o programa.
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+---
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+## Detalhes da implementação
 
-A classe contém três métodos, sendo:
+- A classe `Estacionamento` contém os atributos `precoInicial`, `precoPorHora` e uma lista `veiculos` que armazena as placas dos veículos estacionados.
+- O método `AdicionarVeiculo` lê a placa digitada pelo usuário e adiciona à lista.
+- O método `RemoverVeiculo` verifica a existência do veículo, solicita o número de horas estacionadas, calcula o valor final usando a fórmula:  
+  `valor = precoInicial + precoPorHora * horas`  
+  e remove o veículo da lista.
+- O método `ListarVeiculos` percorre a lista e exibe as placas, ou exibe mensagem caso esteja vazia.
+- O programa exibe um menu de opções para o usuário escolher as operações.
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+---
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+## Como executar
 
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+1. Clone este repositório  
+2. Navegue até a pasta do projeto  
+3. Execute `dotnet run` no terminal para iniciar o programa  
+4. Utilize o menu para testar as funcionalidades
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
+---
 
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+---
+
+## Conclusão
+
+Este projeto cumpriu os requisitos do desafio proposto, demonstrando o uso básico de listas, manipulação de dados pelo console e lógica de cálculo em C#.
+
+---
+
+
+Obrigado por acompanhar meu projeto! 🚗🚙
+
